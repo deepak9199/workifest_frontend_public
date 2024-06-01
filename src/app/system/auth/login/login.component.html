@@ -1,0 +1,56 @@
+<app-loading *ngIf="loading"></app-loading>
+<div *ngIf="!loading" class="body_content">
+    <section class="our-login">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 m-auto wow fadeInUp" data-wow-delay="300ms">
+                    <div class="main-title text-center">
+                        <h2 class="title">Log In</h2>
+                        <p class="paragraph">Give your visitor a smooth online
+                            experience with a solid UX design</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row wow fadeInRight" data-wow-delay="300ms">
+                <div class="col-xl-6 mx-auto">
+                    <div class="log-reg-form search-modal form-style1 bgc-white p50 p30-sm default-box-shadow1 bdrs12">
+                        <!-- Make sure FormsModule is imported in your Angular module -->
+
+                        <form #myLoginForm="ngForm" (ngSubmit)="signIn(); myLoginForm.reset()">
+                            <div class="mb30">
+                                <h4>We're glad to see you again!</h4>
+                                <p class="text">Don't have an account?
+                                    <a class="text-thm" [routerLink]="['/role']">Sign Up!</a>
+                                </p>
+                            </div>
+                            <div class="mb20">
+                                <label class="form-label fw600 dark-color">Email Address</label>
+                                <input [(ngModel)]="form_login.email" name="email" #email="ngModel" required
+                                    type="email" class="form-control" placeholder="Enter Email" />
+                                <div *ngIf="email.invalid && (email.dirty || email.touched)">
+                                    <div *ngIf="email.errors?.['required']">Email is required.</div>
+                                </div>
+                            </div>
+
+                            <div class="mb15">
+                                <label class="form-label fw600 dark-color">Password</label>
+                                <input [(ngModel)]="form_login.password" name="password" #password="ngModel" required
+                                    type="password" class="form-control" placeholder="*******" />
+                                <div *ngIf="password.invalid && (password.dirty || password.touched)">
+                                    <div *ngIf="password.errors?.['required']">Password is required.</div>
+                                </div>
+                            </div>
+
+                            <div class="d-grid mb20">
+                                <button class="ud-btn btn-thm" type="submit" [disabled]="myLoginForm.invalid">Log In <i
+                                        class="fal fa-arrow-right-long"></i></button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <a class="scrollToHome "><i class="fas fa-angle-up"></i></a>
+</div>

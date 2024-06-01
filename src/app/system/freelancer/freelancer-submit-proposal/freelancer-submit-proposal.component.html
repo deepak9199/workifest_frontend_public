@@ -1,0 +1,286 @@
+<app-loading *ngIf="loading"></app-loading>
+<div *ngIf="!loading" class="body_content">
+
+    <section class="breadcumb-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-lg-10">
+                    <div class="breadcumb-style1 mb10-xs">
+                        <div class="breadcumb-list"><a>Home</a><a>Job</a><a> {{projects.category}} </a></div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-lg-2">
+                    <div class="d-flex align-items-center justify-content-sm-end">
+                        <a>
+                            <div class="share-save-widget d-flex align-items-center ml15 "><span
+                                    class="icon flaticon-like dark-color fz12 mr10"></span>
+                                <div class="h6 mb-0">Save</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="breadcumb-section pt-0">
+        <div
+            class="cta-service-v1 freelancer-single-style mx-auto maxw1700 pt120 pt60-sm pb120 pb60-sm bdrs16 position-relative overflow-hidden d-flex align-items-center mx20-lg px30-lg">
+            <img alt="right-bottom" loading="lazy" width="255" height="181" decoding="async" data-nimg="1"
+                class="right-bottom-img wow zoomIn" style="color: transparent; visibility: visible;"><img
+                alt="vector-service" loading="lazy" width="532" height="300" decoding="async" data-nimg="1"
+                class="service-v1-vector bounce-y d-none d-xl-block" src="assets/images/vector-service-v1.webp"
+                style="color: transparent;">
+            <div class="container">
+                <div class="row wow fadeInUp" style="visibility: visible;">
+                    <div class="col-xl-7">
+                        <div class="position-relative">
+                            <h2>Food Delviery Mobile App</h2>
+                            <div class="list-meta mt15">
+                                <p class="mb-0 dark-color fz15 fw500 list-inline-item mb5-sm"><i
+                                        class="flaticon-place vam fz20 text-thm2 me-2"></i> London, UK</p>
+                                <p class="mb-0 dark-color fz15 fw500 list-inline-item ml15 mb5-sm ml0-xs"><i
+                                        class="flaticon-calendar text-thm2 vam fz20 me-2"></i> January 15, 2022</p>
+                                <p class="mb-0 dark-color fz15 fw500 list-inline-item ml15 mb5-sm ml0-xs"><i
+                                        class="flaticon-website text-thm2 vam fz20 me-2"></i> 902 Views</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div>
+        <section class="pt30">
+            <div class="container">
+                <div class="row wrap">
+                    <div class="col-lg-8">
+                        <div class="column">
+                            <div class="scrollbalance-inner">
+                                <div class="row">
+                                    <div class="col-sm-6 col-xl-4">
+                                        <div class="iconbox-style1 contact-style d-flex align-items-start mb30">
+                                            <div class="icon flex-shrink-0"><span
+                                                    class="flaticon-notification-1"></span></div>
+                                            <div class="details">
+                                                <h5 class="title">Seller Type</h5>
+                                                <p class="mb-0 text">Company</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-xl-4">
+                                        <div class="iconbox-style1 contact-style d-flex align-items-start mb30">
+                                            <div class="icon flex-shrink-0"><span class="flaticon-dollar"></span></div>
+                                            <div class="details">
+                                                <h5 class="title">Project type</h5>
+                                                <p class="mb-0 text"> {{projects.pricetype}} </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-xl-4">
+                                        <div class="iconbox-style1 contact-style d-flex align-items-start mb30">
+                                            <div class="icon flex-shrink-0"><span class="flaticon-fifteen"></span></div>
+                                            <div class="details">
+                                                <h5 class="title">Project Duration</h5>
+                                                <p class="mb-0 text"> {{projects.projectduration}} </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-xl-4">
+                                        <div class="iconbox-style1 contact-style d-flex align-items-start mb30">
+                                            <div class="icon flex-shrink-0"><span class="flaticon-like-1"></span></div>
+                                            <div class="details">
+                                                <h5 class="title">Project Level</h5>
+                                                <p class="mb-0 text"> {{projects.level}} </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-xl-4">
+                                        <div class="iconbox-style1 contact-style d-flex align-items-start mb30">
+                                            <div class="icon flex-shrink-0"><span class="flaticon-translator"></span>
+                                            </div>
+                                            <div class="details">
+                                                <h5 class="title">Languages</h5>
+                                                <p class="mb-0 text"> {{projects.language}} </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-xl-4">
+                                        <div class="iconbox-style1 contact-style d-flex align-items-start mb30">
+                                            <div class="icon flex-shrink-0"><span class="flaticon-goal"></span></div>
+                                            <div class="details">
+                                                <h5 class="title">English Level</h5>
+                                                <p class="mb-0 text"> {{projects.languageslevel}} </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="service-about">
+                                    <h4>Description</h4>
+                                    <p class="text mb30"> {{projects.projectdetail}} </p>
+
+                                    <hr class="opacity-100 mb60 mt60">
+                                    <h4 class="mb30">Attachments</h4>
+                                    <div class="row">
+                                        <div class="col-6 col-lg-3">
+                                            <div class="project-attach">
+                                                <h6 class="title">Project Brief</h6>
+                                                <p>PDF</p><span class="icon flaticon-page"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-lg-3">
+                                            <div class="project-attach">
+                                                <h6 class="title">Project Brief</h6>
+                                                <p>PDF</p><span class="icon flaticon-page"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="opacity-100 mb60 mt30">
+                                    <h4 class="mb30">Skills Required</h4>
+                                    <div class="mb60">
+                                        <a class="tag list-inline-item mb-2 mb-xl-0 mr10"> {{projects.skills}} </a>
+                                    </div>
+                                    <hr class="opacity-100 mb60">
+                                    <h4 class="mb30">Project Proposals {{projects.proposals.length}} </h4>
+                                    <div class="row">
+                                        <div *ngFor="let proposals of projects.proposals" class="col-md-6 col-lg-12">
+                                            <div
+                                                class="freelancer-style1 bdr1 hover-box-shadow row ms-0 align-items-start">
+                                                <div class="col-xl-10 px-0">
+                                                    <div class="d-lg-flex">
+                                                        <div class="thumb w90 position-relative rounded-circle mb15-md">
+                                                            <img alt="rounded-circle" loading="lazy" width="90"
+                                                                height="90" decoding="async" data-nimg="1"
+                                                                class="rounded-circle mx-auto" src="assets/ea-1ff1e.png"
+                                                                style="color: transparent;"><span class="online"></span>
+                                                        </div>
+                                                        <div class="details ml20 ml0-md mb15-md">
+                                                            <h5 class="title mb-1">Leslie Alexander</h5>
+                                                            <div class="review mb20">
+                                                                <p class="mb-0 fz14 list-inline-item mb5-sm pe-1"><i
+                                                                        class="fas fa-star fz10 review-color pr10"></i>
+                                                                    <span class="dark-color">4.9</span> (595 reviews)
+                                                                </p>
+                                                                <p class="mb-0 fz14 list-inline-item mb5-sm pe-1"><i
+                                                                        class="flaticon-30-days fz16 vam text-thm2 me-1 bdrl1 bdrn-md pl15 pl0-md bdrn-xs"></i>
+                                                                    2 hours ago</p>
+                                                                <p class="mb-0 fz14 list-inline-item mb5-sm"><i
+                                                                        class="flaticon-contract fz16 vam text-thm2 me-1 bdrl1 bdrn-md pl15 pl0-md bdrn-xs"></i>
+                                                                    1 Received</p>
+                                                            </div>
+                                                            <p class="text mb-0">Many desktop publishing packages and
+                                                                web page editors now use Lorem Ipsum as their default
+                                                                model text.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-2 px-0">
+                                                    <div class="text-lg-center text-xl-end mt-0 mt-lg-2 mt-xl-0">
+                                                        <h4>$100 - $150</h4>
+                                                        <p class="text mb-0">in 100 hours</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bsp_reveiw_wrt mt25">
+                                        <h4>Send Your Proposal</h4>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="mb20"><label class="fw500 ff-heading dark-color mb-2">Your
+                                                        hourly
+                                                        price</label><input [(ngModel)]="formProposals.hourly_price"
+                                                        id="hourly_price" name="hourly_price" class="form-control"
+                                                        placeholder="Enter Your Price" type="text"></div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="mb20"><label
+                                                        class="fw500 ff-heading dark-color mb-2">Estimated
+                                                        Hours</label><input [(ngModel)]="formProposals.Estimated_Hours"
+                                                        id="Estimated_Hours" name="Estimated_Hours" class="form-control"
+                                                        placeholder="Enter Estimated Hours" type="text"></div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="mb-4"><label
+                                                        class="fw500 fz16 ff-heading dark-color mb-2">Cover
+                                                        Letter</label><textarea [(ngModel)]="formProposals.cover_letter"
+                                                        id="cover_letter" name="cover_letter" class="pt15" rows="6"
+                                                        placeholder="Enter Cover Letter"></textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div (click)="submitproposal()" class="d-grid"><a
+                                                        class="ud-btn btn-thm">Submit a Proposal<i
+                                                            class="fal fa-arrow-right-long"></i></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="column">
+                            <div>
+                                <div style="padding-bottom: 0px;"></div>
+                                <div class="scrollbalance-inner" style="transform: translateZ(0px);">
+                                    <div class="blog-sidebar ms-lg-auto">
+                                        <div class="price-widget pt25 bdrs8">
+                                            <h3 class="widget-title">$ {{projects.cost}} </h3>
+                                            <p class="text fz14">Hourly Rate</p>
+                                            <div class="d-grid"><a (click)="submitaproposal()"
+                                                    class="ud-btn btn-thm">Submit a
+                                                    Proposal<i class="fal fa-arrow-right-long"></i></a></div>
+                                        </div>
+                                        <div class="freelancer-style1 service-single mb-0 bdrs8">
+                                            <h4>About Client</h4>
+                                            <div class="wrapper d-flex align-items-center mt20">
+                                                <div class="thumb position-relative mb25">
+                                                    <img *ngIf="client.image == ''" alt="profile" loading="lazy"
+                                                        width="71" height="71" decoding="async" data-nimg="1"
+                                                        class="rounded-circle wa-xs" src="assets/user033f.png"
+                                                        style="color: transparent; height: 71px; width: 71px; object-fit: cover;">
+                                                    <img *ngIf="client.image != ''" alt="profile" loading="lazy"
+                                                        width="71" height="71" decoding="async" data-nimg="1"
+                                                        class="rounded-circle wa-xs" src="{{client.image}}"
+                                                        style="color: transparent; height: 71px; width: 71px; object-fit: cover;">
+                                                </div>
+                                                <div class="ml20">
+                                                    <h5 class="title mb-1"> </h5>
+                                                    <p class="mb-0"> {{client.username}}</p>
+                                                    <!-- <div class="review">
+                                                        <p><i class="fas fa-star fz10 review-color pr10"></i><span
+                                                                class="dark-color">4.9</span> (595 reviews)</p>
+                                                    </div> -->
+                                                </div>
+                                            </div>
+                                            <hr class="opacity-100">
+                                            <div class="details">
+                                                <div class="fl-meta d-flex align-items-center justify-content-between">
+                                                    <a class="meta fw500 text-start">Location<br><span
+                                                            class="fz14 fw400"> {{client.country}} {{client.city}}
+                                                        </span>
+                                                    </a>
+                                                    <a class="meta fw500 text-start"> Tag Line <br><span
+                                                            class="fz14 fw400">{{client.tagline}} </span>
+                                                    </a>
+                                                    <a class="meta fw500 text-start">Departments<br><span
+                                                            class="fz14 fw400">Designer</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="d-grid mt30"><a class="ud-btn btn-thm-border"
+                                                    href="/contact">Contact Buyer<i
+                                                        class="fal fa-arrow-right-long"></i></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <a class="scrollToHome "><i class="fas fa-angle-up"></i></a>
+</div>

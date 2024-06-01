@@ -1,0 +1,123 @@
+<app-loading *ngIf="loading"></app-loading>
+<div *ngIf="!loading" class="container">
+    <div class="dashboard__content ">
+        <div class="row pb40">
+
+            <div class="col-lg-9">
+                <div class="dashboard_title_area">
+                    <h2>Manage Project</h2>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="ps-widget bgc-white bdrs4 p30 mb30 overflow-hidden position-relative">
+                    <div class="navtab-style1">
+                        <nav>
+                            <div class="nav nav-tabs mb30">
+                                <button (click)="projecttabtab('ongoing')"
+                                    [ngClass]="{'active': activeTab === 'ongoing'}" class="nav-link fw500 ps-0">Ongoing
+                                    Services</button>
+
+                                <button (click)="projecttabtab('completed')"
+                                    [ngClass]="{'active': activeTab === 'completed'}"
+                                    class="nav-link fw500 ps-0">Completed projects</button>
+
+                            </div>
+                        </nav>
+                        <div *ngIf="outgoingprojects" class="packages_table table-responsive">
+                            <table class="table-style3 table at-savesearch">
+                                <thead class="t-head">
+                                    <tr>
+                                        <th scope="col">Title</th>
+                                        <th scope="col">Category</th>
+                                        <th scope="col">Type/Cost</th>
+                                        <th scope="col">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="t-body">
+                                    <tr *ngFor="let projectsdata of projects;let i =index">
+                                        <th scope="row">
+                                            <div
+                                                class="freelancer-style1 box-shadow-none row m-0 p-0 align-items-lg-end">
+                                                <div class="d-lg-flex px-0">
+                                                    <div class="details mb15-md-md">
+                                                        <h5 class="title mb10"> {{projectsdata.title}} </h5>
+                                                        <p class="mb-0 fz14 list-inline-item mb5-sm pe-1"><i
+                                                                class="flaticon-place fz16 vam text-thm2 me-1"></i>
+                                                            <!-- --> {{projectsdata.country}} , {{projectsdata.city}}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td class="vam"><span class="fz15 fw400"> {{projectsdata.category}}
+                                            </span>
+                                        </td>
+                                        <td class="vam"><span class="fz14 fw400">$ {{projectsdata.cost}} /
+                                                {{projectsdata.pricetype}} </span></td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a *ngIf="projectsdata.submit_status===''" (click)="submit(i)"
+                                                    class="ud-btn btn-thm">Submit<i
+                                                        class="fal fa-arrow-right-long"></i></a>
+                                                <a *ngIf="projectsdata.submit_status!=''"
+                                                    class=" ud-btn btn-thm">Submited<i
+                                                        class="fal fa-arrow-right-long"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div *ngIf="completedprojects" class="packages_table table-responsive">
+                            <table class="table-style3 table at-savesearch">
+                                <thead class="t-head">
+                                    <tr>
+                                        <th scope="col">Title</th>
+                                        <th scope="col">Category</th>
+                                        <th scope="col">Type/Cost</th>
+                                        <th scope="col">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="t-body">
+                                    <tr *ngFor="let projectsdata of projects">
+                                        <th scope="row">
+                                            <div
+                                                class="freelancer-style1 box-shadow-none row m-0 p-0 align-items-lg-end">
+                                                <div class="d-lg-flex px-0">
+                                                    <div class="details mb15-md-md">
+                                                        <h5 class="title mb10"> {{projectsdata.title}} </h5>
+                                                        <p class="mb-0 fz14 list-inline-item mb5-sm pe-1"><i
+                                                                class="flaticon-place fz16 vam text-thm2 me-1"></i>
+                                                            <!-- --> {{projectsdata.country}} , {{projectsdata.city}}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td class="vam"><span class="fz15 fw400"> {{projectsdata.category}}
+                                            </span>
+                                        </td>
+                                        <td class="vam"><span class="fz14 fw400">$ {{projectsdata.cost}} /
+                                                {{projectsdata.pricetype}} </span></td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a class="icon me-2" id="edit" data-bs-toggle="modal"
+                                                    data-bs-target="#proposalModal">
+                                                    <span class="flaticon-pencil"> Completed
+                                                    </span></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
